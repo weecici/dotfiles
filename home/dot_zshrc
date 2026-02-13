@@ -1,0 +1,116 @@
+###############################
+### OH-MY-ZSH CONFIGURATION ###
+###############################
+plugins=(
+  archlinux
+  eza
+  git
+  fzf
+  fzf-tab
+  kitty
+  sudo
+  vi-mode
+  zoxide
+  zsh-256color
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+source /usr/share/cachyos-zsh-config/cachyos-config.zsh
+
+# -------------------------------------------------------------------------------------------------------------------------------
+#####################
+### ENV VARIABLES ###
+#####################
+
+export PATH=$HOME/.scripts:$PATH
+export PATH=$HOME/go/bin:$PATH
+export VISUAL=nvim
+export EDITOR=nvim
+export GIT_SSH_COMMAND="ssh -q"
+export PGROOT="/var/lib/postgres"
+export PGDATA="/var/lib/postgres/data"
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+export PYTORCH_ALLOC_CONF="expandable_segments:True"
+export HF_HUB_ENABLE_HF_TRANSFER=1
+export GEMINI_MODEL="gemini-2.5-flash"
+
+# -------------------------------------------------------------------------------------------------------------------------------
+#################
+### FUNCTIONS ###
+#################
+
+function inet-free {
+  ~/.scripts/inet.sh
+}
+
+function postgresql {
+    sudo chown -R $(whoami) $PGROOT 
+    sudo mkdir -p /run/postgresql
+    sudo chown -R $(whoami) /run/postgresql 
+    pg_ctl $1
+}
+
+function glmk { # enable global make
+    if [[ $1 = "on" ]]; then
+        MAKEFLAGS="-f ~/.config/mkfile/global.mk"
+    else
+        MAKEFLAGS=""
+    fi
+}
+
+# -------------------------------------------------------------------------------------------------------------------------------
+###############
+### ALIASES ###
+###############
+
+alias  c="clear; tmux clear-history"
+alias  l="eza -lh  --icons=auto" # long list
+alias ls="eza -1   --icons=auto" # short list
+alias ll="eza -lha --icons=auto --sort=name --group-directories-first" # long list all
+alias ld="eza -lhD --icons=auto" # long list dirs
+alias lt="eza --icons=auto --tree" # list folder as tree
+
+alias sunvim="sudo -E nvim"  
+alias warp-on="sudo systemctl start warp-svc; warp-cli connect"
+alias spotx-setup="bash <(curl -sSL https://spotx-official.github.io/run.sh)"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-firmware="sudo pacman -S \
+  linux-firmware \
+  linux-firmware-amdgpu \
+  linux-firmware-atheros \
+  linux-firmware-broadcom \
+  linux-firmware-cirrus \
+  linux-firmware-intel \
+  linux-firmware-mediatek \
+  linux-firmware-nvidia \
+  linux-firmware-other \
+  linux-firmware-radeon \
+  linux-firmware-realtek \
+  linux-firmware-whence"
+alias rollback-firmware="sudo downgrade \
+  linux-firmware \
+  linux-firmware-amdgpu \
+  linux-firmware-atheros \
+  linux-firmware-broadcom \
+  linux-firmware-cirrus \
+  linux-firmware-intel \
+  linux-firmware-mediatek \
+  linux-firmware-nvidia \
+  linux-firmware-other \
+  linux-firmware-radeon \
+  linux-firmware-realtek \
+  linux-firmware-whence"
+
+alias lzg="lazygit"
+alias lzdk="lazydocker"
+alias yz="yazi"
+alias cz="chezmoi"
+alias npm="pnpm"
+alias npx="pnpx"
+
+# -------------------------------------------------------------------------------------------------------------------------------
+#############
+### OTHER ###
+#############
+
+eval "$(starship init zsh)"

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Stardew Valley
+Icon=sv
+Exec=umu-run "/data/Games/Stardew Valley/Stardew Valley.exe" -dx11
+Categories=Game;
+Keywords=sv

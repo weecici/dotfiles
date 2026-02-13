@@ -1,0 +1,28 @@
+[user]
+  name = CiCi
+	email = 96775840+weecici@users.noreply.github.com. 
+[safe]
+	directory = *
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[branch]
+  autoSetupRebase = always
+[rebase]
+  autoStash = true
+[merge]
+  conflictstyle = zdiff3
+[diff]
+  algorithm = histogram
+[fetch]
+  prune = true
+[rerere]
+  enabled = true
+[credential]
+	helper = store
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

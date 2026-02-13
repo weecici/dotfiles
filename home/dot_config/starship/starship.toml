@@ -1,0 +1,76 @@
+format = """
+$os \
+$username\
+$directory\
+$git_branch\
+$git_status \
+$fill  \
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+
+[fill]
+symbol = "—"
+style = "bold white"
+
+[os]
+format = "[](fg:white)[$symbol(name)]($style)[](fg:white)"
+style = "fg:#4F75FF bg:white"
+disabled = false
+
+[os.symbols]
+Windows = "  "
+Arch = " 󰣇 "
+CachyOS = " 󰣇 "
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[character]
+success_symbol = "[    ](bold green)"
+error_symbol = "[    ](bold red)"
+vicmd_symbol = "[    ](bold green)"
+
+[directory]
+read_only = " 󰌾"
+truncation_length = 10
+truncate_to_repo = true
+style = "bold blue"
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = true 
+disabled = false
+style = "fg:#4F75FF bg:white"
+format = "[](fg:white)[$duration]($style)[](fg:white)"
+
+[git_state]
+disabled = false
+rebase = "rebasing"
+merge = "merging"
+revert = "reverting"
+cherry_pick = " picking"
+bisect = "bisecting"
+am = "am'ing"
+am_or_rebase = "am/rebase"
+
+[git_status]
+disabled = false
+style = "#ABB2BF"
+format = '([\[ $ahead_behind$all_status\]]($style) )'
+conflicted = " ${count}](#E06C75) "
+stashed = "[ ${count}] "
+ahead = "[󰞙 ${count}](#61AFEF) "
+behind = "[󰞒 ${count}](#56B6C2) "
+diverged = "󰵉 [${ahead_count}](#61AFEF) [${behind_count}](#56B6C2) "
+deleted = "[ ${count}](#E06C75) "
+renamed = "[ ${count}](#C678DD) "
+modified = "[ ${count}](#E5C07B) "
+staged = "[ ${count}](#98C379) "
+untracked = "[󱅘 ${count}](#C678DD) "

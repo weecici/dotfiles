@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Wuthering Waves
+Icon=wuwa
+Exec=env SteamOS=1 GAMEID=umu-3513350 WINEDLLOVERRIDES="KRSDKExternal.exe=d" umu-run "/data/Games/Steam/steamapps/common/Wuthering Waves/Wuthering Waves.exe" -dx11
+Categories=Game;
+Keywords=wuwa
