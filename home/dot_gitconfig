@@ -7,6 +7,8 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[push]
+  autoSetupRemote = true
 [branch]
   autoSetupRebase = always
 [rebase]
