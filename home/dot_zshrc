@@ -33,6 +33,13 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export PYTORCH_ALLOC_CONF="expandable_segments:True"
 export HF_HUB_ENABLE_HF_TRANSFER=1
 export GEMINI_MODEL="gemini-2.5-flash"
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # -------------------------------------------------------------------------------------------------------------------------------
 #################
