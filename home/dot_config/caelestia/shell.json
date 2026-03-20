@@ -487,6 +487,7 @@
   "services": {
     "weatherLocation": "",
     "useFahrenheit": false,
+    "useFahrenheitPerformance": false,
     "useTwelveHourClock": false,
     "gpuType": "",
     "visualiserBars": 45,
