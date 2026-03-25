@@ -21,7 +21,6 @@ pkgs=(
   # llm's tools
   "ollama"
   "gemini-cli"
-  "github-copilot-cli"
 
   # js/ts
   "pnpm"
@@ -54,7 +53,6 @@ pkgs=(
   # tools / utils
   "chezmoi" # manage dotfiles
   "sbctl"   # secure-boot
-  "ntfs-3g" # ntfs
   "starship"
   "tmux-plugin-manager"
   "zoxide"
@@ -72,6 +70,8 @@ pkgs=(
   "wayvnc"
   "wf-recorder"
   "just" # justfile (like makefile)
+  "cava" # for music visualization in terminal
+  "btop" # system monitor in terminal
 
   # network tools
   "nmap"
@@ -106,6 +106,10 @@ pkgs=(
   "hypridle"
   "hyprsunset"
   "hyprlock"
+
+  # DankMaterialShell
+  "dms-shell-bin"
+  "matugen-bin"
 )
 
 ${aur_helper} -S "${pkgs[@]}" --needed
