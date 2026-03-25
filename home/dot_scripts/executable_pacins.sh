@@ -72,6 +72,8 @@ pkgs=(
   "just" # justfile (like makefile)
   "cava" # for music visualization in terminal
   "btop" # system monitor in terminal
+  "tlp-pd" # Power management for laptops
+  "tlpui"
 
   # network tools
   "nmap"
@@ -85,13 +87,10 @@ pkgs=(
   "vlc"
   "obs-studio"
   "spotify"
-  "thunar"
+  "dolphin"
   "network-manager-applet"
 
-  # thunar plugins
-  "thunar-archive-plugin"
-  "thunar-media-tags-plugin"
-  "thunar-volman"
+  # file manager plugins
   "tumbler" # make thunar show thumbnails
   "gvfs"    # trash can
 
