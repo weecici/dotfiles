@@ -49,6 +49,9 @@ pkgs=(
   "ttf-jetbrains-mono-nerd"
   "papirus-icon-theme"
   "adwaita-icon-theme"
+  "tela-circle-icon-theme-blue"
+  "tela-circle-icon-theme-nord"
+  "tela-circle-icon-theme-dracula"
 
   # tools / utils
   "chezmoi" # manage dotfiles

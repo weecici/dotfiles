@@ -2,12 +2,17 @@ MenuBar=Disabled
 
 [General]
 OpenExternallyCalledFolderInNewTab=true
+ShowFullPath=true
+ShowStatusBar=Disabled
+TerminalApplication=kitty
 Version=202
 ViewPropsTimestamp=2026,3,25,17,10,17.917
-TerminalApplication=kitty
 
 [Icons]
-Theme=Papirus-Dark
+Theme=Tela-circle-blue-dark
+
+[IconsMode]
+PreviewSize=80
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -24,6 +29,3 @@ Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,glycin-heif,comicbook
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
-
-[UiSettings]
-ColorScheme=KvArcDark
