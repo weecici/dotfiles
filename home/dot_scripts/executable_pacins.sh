@@ -93,6 +93,7 @@ pkgs=(
   # file manager plugins
   "tumbler" # make thunar show thumbnails
   "gvfs"    # trash can
+  "archlinux-xdg-menu" # fix dolphin not remember default apps, set XDG_MENU_PREFIX=arch-kbuildsycoca6
 
   # input method
   "fcitx5"
