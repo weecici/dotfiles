@@ -178,8 +178,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "firefox": {
-      "count": 7,
-      "lastUsed": 1774414933084,
+      "count": 10,
+      "lastUsed": 1774524509443,
       "name": "Firefox"
     }
   },
@@ -271,18 +271,18 @@
   "runDmsMatugenTemplates": false,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": false,
-  "matugenTemplateHyprland": true,
+  "matugenTemplateHyprland": false,
   "matugenTemplateMangowc": false,
-  "matugenTemplateQt5ct": true,
+  "matugenTemplateQt5ct": false,
   "matugenTemplateQt6ct": true,
-  "matugenTemplateFirefox": true,
+  "matugenTemplateFirefox": false,
   "matugenTemplatePywalfox": false,
   "matugenTemplateZenBrowser": false,
   "matugenTemplateVesktop": false,
   "matugenTemplateEquibop": false,
   "matugenTemplateGhostty": false,
-  "matugenTemplateKitty": true,
-  "matugenTemplateFoot": true,
+  "matugenTemplateKitty": false,
+  "matugenTemplateFoot": false,
   "matugenTemplateAlacritty": false,
   "matugenTemplateNeovim": false,
   "matugenTemplateWezterm": false,
@@ -294,7 +294,7 @@
   "showDock": true,
   "dockAutoHide": false,
   "dockSmartAutoHide": true,
-  "dockGroupByApp": false,
+  "dockGroupByApp": true,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
   "dockSpacing": 4,
@@ -410,23 +410,54 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
-        "workspaceSwitcher",
-        "focusedWindow"
+        {
+          "id": "launcherButton",
+          "enabled": true
+        },
+        {
+          "id": "workspaceSwitcher",
+          "enabled": true
+        },
+        {
+          "id": "focusedWindow",
+          "enabled": true
+        }
       ],
       "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
+        {
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
-        "cpuUsage",
-        "memUsage",
-        "notificationButton",
-        "battery",
-        "controlCenterButton"
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "clipboard",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        }
       ],
       "spacing": 2,
       "innerPadding": -3,
@@ -446,9 +477,9 @@
       "borderColor": "surfaceText",
       "borderOpacity": 1,
       "borderThickness": 1,
-      "widgetOutlineEnabled": false,
+      "widgetOutlineEnabled": true,
       "widgetOutlineColor": "primary",
-      "widgetOutlineOpacity": 1,
+      "widgetOutlineOpacity": 0.2,
       "widgetOutlineThickness": 1,
       "fontScale": 1,
       "iconScale": 1.1,

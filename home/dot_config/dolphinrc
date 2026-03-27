@@ -1,9 +1,14 @@
 MenuBar=Disabled
 
+[ContentDisplay]
+UsePermissionsFormat=CombinedFormat
+
 [General]
+DoubleClickViewAction=create_dir
 OpenExternallyCalledFolderInNewTab=true
 ShowFullPath=true
 ShowStatusBar=Disabled
+ShowToolTips=true
 TerminalApplication=kitty
 Version=202
 ViewPropsTimestamp=2026,3,25,17,10,17.917
@@ -29,3 +34,6 @@ Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,glycin-heif,comicbook
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=KvAdaptaDark
