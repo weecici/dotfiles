@@ -178,8 +178,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "firefox": {
-      "count": 10,
-      "lastUsed": 1774524509443,
+      "count": 13,
+      "lastUsed": 1774603558257,
       "name": "Firefox"
     }
   },
@@ -201,7 +201,7 @@
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": false,
   "weatherEnabled": true,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
@@ -415,6 +415,11 @@
           "enabled": true
         },
         {
+          "id": "memUsage",
+          "enabled": true,
+          "minimumWidth": true
+        },
+        {
           "id": "workspaceSwitcher",
           "enabled": true
         },
@@ -425,15 +430,7 @@
       ],
       "centerWidgets": [
         {
-          "id": "music",
-          "enabled": true
-        },
-        {
           "id": "clock",
-          "enabled": true
-        },
-        {
-          "id": "weather",
           "enabled": true
         }
       ],
@@ -443,19 +440,28 @@
           "enabled": true
         },
         {
-          "id": "clipboard",
+          "id": "notificationButton",
           "enabled": true
         },
         {
-          "id": "notificationButton",
-          "enabled": true
+          "id": "controlCenterButton",
+          "enabled": true,
+          "showNetworkIcon": true,
+          "showAudioIcon": true,
+          "showAudioPercent": true,
+          "showBrightnessIcon": false,
+          "showBrightnessPercent": false,
+          "showMicIcon": false,
+          "showMicPercent": false,
+          "showBatteryIcon": false,
+          "showPrinterIcon": false
         },
         {
           "id": "battery",
           "enabled": true
         },
         {
-          "id": "controlCenterButton",
+          "id": "powerMenuButton",
           "enabled": true
         }
       ],
