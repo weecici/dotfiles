@@ -77,6 +77,7 @@ pkgs=(
   "btop" # system monitor in terminal
   "tlp-pd" # Power management for laptops
   "tlpui"
+  "zellij"
 
   # network tools
   "nmap"
