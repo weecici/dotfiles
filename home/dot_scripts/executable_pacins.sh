@@ -66,6 +66,7 @@ pkgs=(
   "kanata-bin"
   "lazygit"
   "github-cli"
+  "act" # run github actions locally
   "yazi"
   "python-nvidia-ml-py" # for undervolting nvidia gpu
   "cliphist"            # clipboard + history
@@ -93,6 +94,7 @@ pkgs=(
   "spotify"
   "dolphin"
   "network-manager-applet"
+  "obsidian" # note-taking app
 
   # file manager plugins
   "tumbler" # make thunar show thumbnails
@@ -112,7 +114,8 @@ pkgs=(
   "hyprlock"
 
   # DankMaterialShell
-  "dms-shell-bin"
+  "dms-shell"
+  "dms-shell-hyprland"
   "matugen-bin"
 )
 
