@@ -82,7 +82,7 @@ alias lt="eza --icons=auto --tree" # list folder as tree
 alias sunvim="sudo -E nvim"  
 alias warp-on="sudo systemctl start warp-svc; warp-cli connect"
 alias spotx-setup="bash <(curl -sSL https://spotx-official.github.io/run.sh)"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-firmware="sudo pacman -S \
   linux-firmware \
   linux-firmware-amdgpu \
