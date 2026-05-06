@@ -117,6 +117,7 @@ alias cz="chezmoi"
 alias npm="pnpm"
 alias npx="pnpx"
 alias oc="opencode"
+alias stop-services="sudo systemctl stop docker; systemctl --user stop hermes-gateway"
 
 # -------------------------------------------------------------------------------------------------------------------------------
 #############

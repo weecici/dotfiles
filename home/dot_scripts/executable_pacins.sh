@@ -33,9 +33,6 @@ pkgs=(
   "texlive-langother" # includes vietnamese
   "tex-fmt"
 
-  # dbms
-  "postgresql"
-
   # lsp
   "clang"
   "lua-language-server"
@@ -55,7 +52,6 @@ pkgs=(
 
   # tools / utils
   "chezmoi" # manage dotfiles
-  "sbctl"   # secure-boot
   "starship"
   "tmux-plugin-manager"
   "zoxide"
@@ -79,11 +75,11 @@ pkgs=(
   "tlp-pd" # Power management for laptops
   "tlpui"
   "zellij"
+  "etcher-bin" # flash os images to usb
 
   # network tools
   "nmap"
   "macchanger"
-  "speedtest-cli"
 
   # game's utils
   "cachyos-gaming-meta" # cachyos only
@@ -94,7 +90,7 @@ pkgs=(
   "spotify"
   "dolphin"
   "network-manager-applet"
-  "obsidian" # note-taking app
+  "obsidian" # note-taking
 
   # file manager plugins
   "tumbler" # make thunar show thumbnails
