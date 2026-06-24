@@ -3,6 +3,10 @@ MenuBar=Disabled
 [ContentDisplay]
 UsePermissionsFormat=CombinedFormat
 
+[ExtractDialog]
+1920x1080 screen: Window-Maximized=true
+DirHistory[$e]=$HOME/Downloads/cs105/
+
 [General]
 DoubleClickViewAction=create_dir
 OpenExternallyCalledFolderInNewTab=true
