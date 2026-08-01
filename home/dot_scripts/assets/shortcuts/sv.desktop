@@ -2,6 +2,6 @@
 Type=Application
 Name=Stardew Valley
 Icon=sv
-Exec=umu-run "/data/Games/Stardew Valley/Stardew Valley.exe" -dx11
+Exec=env LD_PRELOAD="./libSkiaSharp.so" "/data/Games/Stardew Valley/StardewModdingAPI"
 Categories=Game;
 Keywords=sv

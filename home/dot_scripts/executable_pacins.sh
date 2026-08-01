@@ -76,6 +76,7 @@ pkgs=(
   "tlpui"
   "zellij"
   "etcher-bin" # flash os images to usb
+  "himalaya" # cli mail
 
   # network tools
   "nmap"
@@ -113,6 +114,11 @@ pkgs=(
   "dms-shell"
   "dms-shell-hyprland"
   "matugen-bin"
+
+  # waydroid
+  "waydroid"
+  "waydroid-image"
+  "waydroid-helper"
 )
 
 ${aur_helper} -S "${pkgs[@]}" --needed
