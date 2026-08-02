@@ -1,0 +1,12 @@
+export XDG_MENU_PREFIX=arch-kbuildsycoca6
+export TERMINAL=kitty
+
+export PRESSURE_VESSEL_FILESYSTEMS_RW=/data:/windows
+export WINEPREFIX=$HOME/.local/share/umu/prefixes/cici
+export PROTONPATH=/usr/share/steam/compatibilitytools.d/proton-cachyos-slr
+export DXVK_CONFIG_FILE=$HOME/.config/dxvk.conf
+export DXVK_SHADER_CACHE=1
+
+export UV_CACHE_DIR=/data/.cache/uv
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
