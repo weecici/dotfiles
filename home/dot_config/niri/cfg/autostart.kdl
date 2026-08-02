@@ -1,0 +1,21 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1" // Polkit
+
+// Env
+spawn-sh-at-startup "systemctl --user import-environment"
+spawn-sh-at-startup "dbus-update-activation-environment --systemd"
+
+// Clipboard
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+
+// Toppings
+spawn-sh-at-startup "dms run" // shell
+spawn-sh-at-startup "mako" // noti
+spawn-sh-at-startup "fcitx5 -dr" // input method
+spawn-sh-at-startup "nm-applet --indicator"
+spawn-sh-at-startup "sway-audio-idle-inhibit"
+spawn-sh-at-startup "wlsunset -t 5300 -T 5301" // warm light
+spawn-sh-at-startup "sh ~/.scripts/change_bg.sh /usr/share/grub/themes/cigrub/bgs/ /usr/share/grub/themes/cigrub/bg.png"

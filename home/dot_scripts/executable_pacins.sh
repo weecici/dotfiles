@@ -77,6 +77,9 @@ pkgs=(
   "zellij"
   "etcher-bin" # flash os images to usb
   "himalaya" # cli mail
+  "wlsunset"
+  "swayidle"
+  "grimblast" # screenshot tool
 
   # network tools
   "nmap"
@@ -113,12 +116,16 @@ pkgs=(
   # DankMaterialShell
   "dms-shell"
   "dms-shell-hyprland"
+  "dms-shell-niri"
   "matugen-bin"
 
   # waydroid
   "waydroid"
   "waydroid-image"
   "waydroid-helper"
+
+  # niri
+  "niri"
 )
 
 ${aur_helper} -S "${pkgs[@]}" --needed
