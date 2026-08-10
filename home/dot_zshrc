@@ -33,38 +33,59 @@ export PGDATA="/var/lib/postgres/data"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export PYTORCH_ALLOC_CONF="expandable_segments:True"
 export HF_HUB_ENABLE_HF_TRANSFER=1
-export GEMINI_MODEL="gemini-3.1-flash"
-export UV_CACHE_DIR="/data/.cache/uv"
-# pnpm
+
+# pnpm config start
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+# pnpm config end
 
 # -------------------------------------------------------------------------------------------------------------------------------
 #################
 ### FUNCTIONS ###
 #################
 
-function inet-free {
-  ~/.scripts/inet.sh
+fi-re() {
+  emulate -L zsh
+  setopt pipefail
+
+  local from="$1"
+  local to="$2"
+  local dir="${3:-.}"
+
+  if [[ -z "$from" || -z "$to" ]]; then
+    print -u2 "usage: fi-re <from> <to> [dir]"
+    return 1
+  fi
+
+  rg -l0 --fixed-strings --hidden --glob '!.git' -- "$from" "$dir" |
+    xargs -0 python3 -c '
+import sys
+from pathlib import Path
+
+old = sys.argv[1]
+new = sys.argv[2]
+
+for p in sys.argv[3:]:
+    path = Path(p)
+    try:
+        data = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        continue
+    updated = data.replace(old, new)
+    if updated != data:
+        path.write_text(updated, encoding="utf-8")
+        print(path)
+' "$from" "$to"
 }
 
-function postgresql {
+postgresql() {
     sudo chown -R $(whoami) $PGROOT 
     sudo mkdir -p /run/postgresql
     sudo chown -R $(whoami) /run/postgresql 
     pg_ctl $1
-}
-
-function glmk { # enable global make
-    if [[ $1 = "on" ]]; then
-        MAKEFLAGS="-f ~/.config/mkfile/global.mk"
-    else
-        MAKEFLAGS=""
-    fi
 }
 
 # -------------------------------------------------------------------------------------------------------------------------------
@@ -112,6 +133,7 @@ alias rollback-firmware="sudo downgrade \
 
 alias lzg="lazygit"
 alias lzdk="lazydocker"
+alias dkcp="docker compose"
 alias yz="yazi"
 alias cz="chezmoi"
 alias npm="pnpm"
@@ -120,8 +142,8 @@ alias oc="opencode"
 alias stop-services="sudo systemctl stop docker; systemctl --user stop hermes-gateway"
 
 # -------------------------------------------------------------------------------------------------------------------------------
-#############
-### OTHER ###
-#############
+##############
+### OTHERS ###
+##############
 
 eval "$(starship init zsh)"
