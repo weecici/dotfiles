@@ -4,6 +4,108 @@ window-rule {
 }
 
 layer-rule {
-  match namespace="^noctalia-wallpaper*"
+  match layer="background"
   place-within-backdrop true
 }
+
+// Application-specific rules
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// File dialogs - Open/Save/Select
+window-rule {
+    match title=r#".*(Open|Save|Select).*"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match title=r#".*File.*"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match app-id=r#"org\.gtk\.FileChooserDialog"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match title=r#".*Sign in - Google Accounts — Mozilla Firefox"#
+    open-floating true
+}
+
+// System dialogs
+window-rule {
+    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"zenity"#
+    open-floating true
+}
+
+// Authentication dialogs
+window-rule {
+    match app-id=r#"org\.kde\.polkit-kde-authentication-agent-1"#
+    open-floating true
+}
+
+window-rule {
+    match title=r#".*Authentication.*"#
+    open-floating true
+}
+
+// Password managers
+window-rule {
+    match app-id=r#"org\.keepassxc\.KeePassXC"# title=r#".*Auto-Type.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"Bitwarden"# title=r#".*unlock.*"#
+    open-floating true
+}
+
+// Notification and system utilities
+window-rule {
+    match app-id=r#"nm-connection-editor"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"blueman-manager"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"pavucontrol"#
+    open-floating true
+}
+
+// Steam dialogs
+window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+// File dialogs - Open/Save/Select
+window-rule {
+    match title=r#".*(Open|Save|Select).*"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+
