@@ -8,6 +8,15 @@ layer-rule {
   place-within-backdrop true
 }
 
+
+window-rule {
+    match app-id=r#"firefox"#
+    match app-id=r#"google-chrome"#
+    match app-id=r#"code"#
+    match app-id=r#"obsidian$"#
+    open-maximized true
+}
+
 // Application-specific rules
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
@@ -15,13 +24,13 @@ window-rule {
 }
 
 // File dialogs - Open/Save/Select
-window-rule {
-    match title=r#".*(Open|Save|Select).*"#
-    open-floating true
-    default-column-width { proportion 0.0; }
-    max-width 800
-    max-height 1000
-}
+// window-rule {
+//     match title=r#".*(Open|Save|Select).*"#
+//     open-floating true
+//     default-column-width { proportion 0.0; }
+//     max-width 800
+//     max-height 1000
+// }
 
 window-rule {
     match title=r#".*File.*"#
@@ -98,14 +107,3 @@ window-rule {
     match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
     open-floating true
 }
-
-// File dialogs - Open/Save/Select
-window-rule {
-    match title=r#".*(Open|Save|Select).*"#
-    open-floating true
-    default-column-width { proportion 0.0; }
-    max-width 800
-    max-height 1000
-}
-
-
