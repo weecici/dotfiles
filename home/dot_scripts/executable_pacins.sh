@@ -80,6 +80,7 @@ pkgs=(
   "wlsunset"
   "swayidle"
   "grimblast" # screenshot tool
+  "drawy" # whiteboard tool
 
   # network tools
   "nmap"

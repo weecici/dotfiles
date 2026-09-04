@@ -1,0 +1,12 @@
+[Session]
+LastSavedFile=/data/CiCi/notes/whiteboard/kan.drawy
+LastSavedFileModified=false
+
+[Shortcuts]
+edit_redo=Shift+Z
+edit_undo=Z
+switch_to_ellipse_tool=E
+switch_to_eraser_tool=X
+switch_to_freeform_tool=F; B
+switch_to_line_tool=Q;\s
+switch_to_move_tool=W
