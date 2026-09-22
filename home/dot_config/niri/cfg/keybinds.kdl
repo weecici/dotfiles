@@ -25,6 +25,8 @@ binds {
   MOD+SHIFT+RETURN                    hotkey-overlay-title="Kill Shell" { spawn-sh "dms kill"; }
   XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "dms ipc audio increment 5"; }
   XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "dms ipc audio decrement 5"; }
+  XF86MONBRIGHTNESSUP                 allow-when-locked=true { spawn-sh "brightnessctl set +5%"; }
+  XF86MONBRIGHTNESSDOWN               allow-when-locked=true { spawn-sh "brightnessctl set 5%-"; }
   XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "dms ipc audio mute"; }
   XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "dms ipc audio micmute"; }
 
