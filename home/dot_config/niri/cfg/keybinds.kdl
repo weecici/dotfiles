@@ -11,7 +11,7 @@ binds {
   MOD+T                               hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
   MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
   MOD+C                               hotkey-overlay-title="Open IDE: vscode" { spawn "code"; }
-  MOD+E                               hotkey-overlay-title="Open File Manager: nautilus" { spawn "nautilus"; }
+  MOD+E                               hotkey-overlay-title="Open File Manager: dolphin" { spawn "dolphin"; }
   MOD+W                               hotkey-overlay-title="Open note taking app: Obsidian" { spawn "obsidian"; }
 
   // ─── Dank Material Shell ──
