@@ -11,6 +11,7 @@ pkgs=(
   # docker's stuffs
   "docker"
   "docker-compose"
+  "docker-buildx"
   "lazydocker"
 
   # important python packages
@@ -20,7 +21,6 @@ pkgs=(
 
   # llm's tools
   "ollama"
-  "gemini-cli"
 
   # js/ts
   "pnpm"

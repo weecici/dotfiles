@@ -32,10 +32,12 @@ export PGROOT="/var/lib/postgres"
 export PGDATA="/var/lib/postgres/data"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export PYTORCH_ALLOC_CONF="expandable_segments:True"
-export HF_HUB_ENABLE_HF_TRANSFER=1
+export HF_XET_HIGH_PERFORMANCE=1
+export DOCKER_BUILDKIT=1
 
 # pnpm config start
 export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH=$PNPM_HOME/bin:$PATH
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -100,6 +102,7 @@ alias ll="eza -lha --icons=auto --sort=name --group-directories-first" # long li
 alias ld="eza -lhD --icons=auto" # long list dirs
 alias lt="eza --icons=auto --tree" # list folder as tree
 
+alias susys="sudo systemctl"
 alias sunvim="sudo -E nvim"  
 alias warp-on="sudo systemctl start warp-svc; warp-cli connect"
 alias spotx-setup="bash <(curl -sSL https://spotx-official.github.io/run.sh)"
@@ -116,7 +119,10 @@ alias update-firmware="sudo pacman -S \
   linux-firmware-other \
   linux-firmware-radeon \
   linux-firmware-realtek \
-  linux-firmware-whence"
+  linux-firmware-whence \
+  linux-firmware-ti \
+  linux-firmware-amd \
+  amd-ucode"
 alias rollback-firmware="sudo downgrade \
   linux-firmware \
   linux-firmware-amdgpu \
@@ -129,7 +135,10 @@ alias rollback-firmware="sudo downgrade \
   linux-firmware-other \
   linux-firmware-radeon \
   linux-firmware-realtek \
-  linux-firmware-whence"
+  linux-firmware-whence \
+  linux-firmware-ti \
+  linux-firmware-amd \
+  amd-ucode"
 
 alias lzg="lazygit"
 alias lzdk="lazydocker"
