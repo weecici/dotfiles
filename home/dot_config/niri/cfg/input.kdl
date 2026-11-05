@@ -3,17 +3,15 @@
 
 input {
   keyboard {
-    xkb {
-      layout "us"
-    }
-    numlock // Enable numlock on startup
+    xkb {}
+    numlock
   }
 
   touchpad {
-    tap // Enable tap-to-click
-    natural-scroll // Enable natural (macOS-style) scrolling
+    tap
+    natural-scroll
   }
 
-  focus-follows-mouse // Automatically focus windows under the mouse pointer
-  workspace-auto-back-and-forth // Enable workspace back & forth switching
+  focus-follows-mouse
+  workspace-auto-back-and-forth
 }

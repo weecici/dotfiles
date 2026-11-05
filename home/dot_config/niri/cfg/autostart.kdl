@@ -14,7 +14,7 @@ spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 // Toppings
 spawn-sh-at-startup "dms run" // shell
 spawn-sh-at-startup "mako" // noti
-spawn-sh-at-startup "fcitx5 -dr" // input method
+spawn-sh-at-startup "fcitx5 -r" // input method
 spawn-sh-at-startup "nm-applet --indicator"
 spawn-sh-at-startup "sway-audio-idle-inhibit"
 spawn-sh-at-startup "wlsunset -t 5300 -T 5301" // warm light
