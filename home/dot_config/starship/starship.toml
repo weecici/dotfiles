@@ -21,9 +21,9 @@ style = "fg:#4F75FF bg:white"
 disabled = false
 
 [os.symbols]
-Windows = "  "
-Arch = " 󰣇 "
-CachyOS = " 󰣇 "
+Windows = "  "
+Arch = "  "
+CachyOS = "  "
 
 [username]
 style_user = "green bold"
