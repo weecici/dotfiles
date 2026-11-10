@@ -1,5 +1,5 @@
 ###############################
-### OH-MY-ZSH CONFIGURATION ###
+### ZSH CONFIGURATION ###
 ###############################
 plugins=(
   archlinux
@@ -16,6 +16,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 source /usr/share/cachyos-zsh-config/cachyos-config.zsh
+
+unsetopt CORRECT_ALL
 
 # -------------------------------------------------------------------------------------------------------------------------------
 #####################
