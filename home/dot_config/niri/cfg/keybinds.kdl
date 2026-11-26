@@ -63,6 +63,11 @@ binds {
   MOD+UP                              { focus-monitor-up; }
   MOD+RIGHT                           { focus-monitor-right; }
 
+  MOD+SHIFT+LEFT                      { move-window-to-monitor-left; }
+  MOD+SHIFT+RIGHT                     { move-window-to-monitor-right; }
+  MOD+SHIFT+UP                        { move-window-to-monitor-up; }
+  MOD+SHIFT+DOWN                      { move-window-to-monitor-down; }
+
   MOD+CTRL+LEFT                       { move-column-to-monitor-left; }
   MOD+CTRL+DOWN                       { move-column-to-monitor-down; }
   MOD+CTRL+UP                         { move-column-to-monitor-up; }
